@@ -1,0 +1,95 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="시퀀스1" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="536.8,757.6" sap2010:WorkflowViewState.IdRef="시퀀스1_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="시퀀스1" sap:VirtualizedContainerService.HintSize="516.8,697.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="데이터 스크래핑" sap:VirtualizedContainerService.HintSize="475.2,604.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser '          Page'" sap:VirtualizedContainerService.HintSize="433.6,512" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5900fdaec53b817648dc5b431bd9f0f8" Selector="&lt;html title='다낭 호텔 | 트리바고 특가 상품 검색 및 요금 비교' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,364.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="s" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'OL  js_itemlist'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' class='hotel-item item-order__list-item js_co_item' /&gt;&lt;webctrl tag='article' class='item bg-white' idx='1' /&gt;&lt;webctrl tag='div' class='pos-relative item__wrapper' idx='1' /&gt;&lt;webctrl tag='div' class='item__flex-column' idx='1' /&gt;&lt;/row&gt;&lt;column attr='text' name='Column1' exact='1'&gt;&lt;webctrl tag='li' class='hotel-item item-order__list-item js_co_item' /&gt;&lt;webctrl tag='article' class='item bg-white' idx='1' /&gt;&lt;webctrl tag='div' class='pos-relative item__wrapper' idx='1' /&gt;&lt;webctrl tag='div' class='item__flex-column' idx='1' /&gt;&lt;webctrl tag='div' class='item__details item__details--layout' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='h3' class='m-0' idx='1' /&gt;&lt;webctrl tag='span' class='item-link name__copytext' idx='1' /&gt;&lt;/column&gt;&lt;column attr='text' name='Column2' exact='1'&gt;&lt;webctrl tag='li' class='hotel-item item-order__list-item js_co_item' /&gt;&lt;webctrl tag='article' class='item bg-white' idx='1' /&gt;&lt;webctrl tag='div' class='pos-relative item__wrapper' idx='1' /&gt;&lt;webctrl tag='div' class='item__flex-column' idx='1' /&gt;&lt;webctrl tag='div' class='item__details item__details--layout' idx='1' /&gt;&lt;webctrl tag='div' class='location ov-hidden' idx='1' /&gt;&lt;webctrl tag='div' class='item-link' idx='1' /&gt;&lt;webctrl tag='p' class='details-paragraph details-paragraph--location location-details' idx='1' /&gt;&lt;/column&gt;&lt;column attr='text' name='Column3' exact='1'&gt;&lt;webctrl tag='li' class='hotel-item item-order__list-item js_co_item' /&gt;&lt;webctrl tag='article' class='item bg-white' idx='1' /&gt;&lt;webctrl tag='div' class='pos-relative item__wrapper' idx='1' /&gt;&lt;webctrl tag='div' class='item__flex-column' idx='1' /&gt;&lt;webctrl tag='section' class='accommodation-list__prices--dfcb3' idx='1' /&gt;&lt;webctrl tag='div' class='accommodation-list__row--57d49' idx='1' /&gt;&lt;webctrl tag='article' class='accommodation-list__cheapest--28ced accommodation-list__article--34e10' idx='1' /&gt;&lt;webctrl tag='button' class='accommodation-list__button--3d73c accommodation-list__button--31bb8' idx='1' /&gt;&lt;webctrl tag='span' class='accommodation-list__deal--6f1fa accommodation-list__deal--40530' idx='1' /&gt;&lt;webctrl tag='span' class='accommodation-list__price--221e3 accommodation-list__price--1461d' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="0" NextLinkSelector="&lt;webctrl aaname='다음' parentid='js_item_list_section' tag='BUTTON' type='button' /&gt;" SimulateClick="True">
+                <ui:ExtractData.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0992566c9a120e36fd63ce1c8f7cf7d6" Selector="&lt;webctrl id='js_itemlist' tag='OL' /&gt;" WaitForReady="COMPLETE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:ExtractData.Target>
+              </ui:ExtractData>
+              <ui:OutputDataTable DataTable="[ExtractDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[s]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[s]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+    </Sequence>
+  </Sequence>
+</Activity>
